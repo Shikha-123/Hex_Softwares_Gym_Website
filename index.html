@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitZone Gym</title>
+  <style>
+    * {
+    background-color: #111;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      
+
+    }
+
+    body {
+      line-height: 1.6;
+      background-image: url('bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    
+
+
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: black;
+      padding: 1em 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      color: purple;
+    }
+
+    nav ul li a:hover {
+      color: #00ff88;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001e3?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: darkred;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      color: brown;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: hwb(230 20% 17% / 0.852);
+    }
+
+    .facilities, .services, .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      color: orange
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#membership">Membership</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome to FitZone Gym</h1>
+    <p>Train Hard, Stay Strong</p>
+  </header>
+
+  <section id="facilities">
+    <h2>Our Facilities</h2>
+    <div class="facilities">
+      <div class="card">
+        <h3>Weightlifting Area</h3>
+        <p>Fully equipped free weights and machines for all strength levels.</p>
+      </div>
+      <div class="card">
+        <h3>Cardio Zone</h3>
+        <p>Treadmills, bikes, and ellipticals with personal entertainment screens.</p>
+      </div>
+      <div class="card">
+        <h3>Yoga Studio</h3>
+        <p>Quiet, spacious studio for yoga and group classes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Personal Training</h3>
+        <p>Work one-on-one with certified trainers to meet your goals.</p>
+      </div>
+      <div class="card">
+        <h3>Nutrition Guidance</h3>
+        <p>Access personalized meal plans and dietary support.</p>
+      </div>
+      <div class="card">
+        <h3>Group Classes</h3>
+        <p>Join spinning, Zumba, HIIT, and more—fun with friends!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership">
+    <h2>Membership Plans</h2>
+    <div class="plans">
+      <div class="card">
+        <h3>Basic - $29/mo</h3>
+        <p>Access to gym equipment and locker room.</p>
+      </div>
+      <div class="card">
+        <h3>Premium - $49/mo</h3>
+        <p>Includes all classes, gym access, and sauna use.</p>
+      </div>
+      <div class="card">
+        <h3>Elite - $79/mo</h3>
+        <p>All premium benefits + personal training sessions monthly.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Optional: Smooth scroll polyfill for older browsers
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
